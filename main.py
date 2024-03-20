@@ -1,5 +1,5 @@
 # Define a decorator to check authorization before executing a function
-def authorize(func):
+def decorator(func):
     """
     A wrapper function that checks if you're allowed to do something before actually
     doing it. If you're not allowed, it stops and tells you so.
@@ -21,17 +21,17 @@ def is_authorized():
 
 # Decorate functions with the authorization check
 # This means "make sure I'm allowed to do this before doing it"
-@authorize
+@decorator
 def do_A():
     """Does Task A and tells you it's done."""
     return "Do A"
 
-@authorize
+@decorator
 def do_B():
     """Does Task B and tells you it's done."""
     return "Do B"
 
-@authorize
+@decorator
 def do_C():
     """Does Task C and tells you it's done."""
     return "Do C"
