@@ -4,7 +4,7 @@
 Learn and implement decorators in Python to extend the functionality of functions at runtime without modifying the original function code. This lab will focus on applying decorators to add authorization checks to functions.
 
 ## Due Date
-Wednesday, March 27
+Monday, April 1 
 
 ## Total Points
 20 points
