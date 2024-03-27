@@ -1,46 +1,74 @@
-# CECS 342 Lab Assignment 4 - Decorators
-
-## Objective
-Learn and implement decorators in Python to extend the functionality of functions at runtime without modifying the original function code. This lab will focus on applying decorators to add authorization checks to functions.
+# CECS 342 - Lab Assignment 4
 
 ## Due Date
-Monday, April 1 
+
+- **Sunday, March 31**
 
 ## Total Points
-20 points
 
-## Background
-A decorator in Python is a function that takes another function and extends its behavior without explicitly modifying it. Decorators allow for the dynamic alteration of the functionality of your functions or methods. This lab introduces the concept of decorators and their application in implementing authorization checks in a DRY (Don't Repeat Yourself) manner.
+- **20 points**
 
-## Task Description
+---
 
-### Problem 1: Implement Authorization Checks using Decorators (10 Points)
-You are provided with several functions, each performing separate tasks. Your job is to add authorization checks to these functions in an efficient way that avoids redundancy and adheres to the DRY principle.
+## Overview
 
-## Instructions
+In this lab assignment, we're diving into two powerful features of Python: decorators and asynchronous programming. The lab is divided into two main parts, each focusing on a distinct aspect of Python programming.
 
-### Step 1: Understanding Decorators
-- Familiarize yourself with the basic concept of decorators as shown in the introductory example. Understand how decorators can wrap a function to modify its behavior.
-- Notice how the `@decorator` syntax simplifies the application of decorators.
+- **Part 1**: Utilizes decorators to streamline the process of adding authorization checks to multiple functions, ensuring code remains DRY (Don't Repeat Yourself) and maintainable.
+- **Part 2**: Explores asynchronous programming by scheduling concurrent execution of functions to calculate factorials, showcasing the use of `async`, `await`, `asyncio.sleep()`, `asyncio.gather`, and `asyncio.run()`.
 
-### Step 2: Implement the Authorization Decorator
-- Create a decorator that checks for authorization before executing the function it decorates.
-- The decorator should only allow the function to run if `is_authorized()` returns `True`. Otherwise, it should return a message indicating the lack of authorization.
-- Apply this decorator to the provided functions (`do_A`, `do_B`, `do_C`) to enforce authorization checks.
+## Part 1: Understanding and Applying Decorators (`decorator.py`)
 
-### Step 3: Apply the Decorator
-- Modify the provided functions to use your authorization decorator, ensuring that each function adheres to the authorization requirement.
+### Objective
 
-### Step 4: Testing
-- Test your implementation to ensure that the authorization checks are working as expected. Functions should only execute if authorized, and an appropriate message should be returned if not authorized.
+Implement a decorator to add authorization checks to functions, eliminating redundant code and adhering to the DRY principle.
 
-## Submission Requirements
-- Submit a `Lab4.py` file containing your code. (Failure to submit will result in a deduction of 10 points)
-- Submit a PDF file containing a copy of your `Lab4.py` file and screenshots of your runtime output. (Missing this file and its contents will result in a deduction of 5 points)
+### Task
 
-## Grading Criteria
-- Program runs successfully with correct output: 100% completion
-- Program runs successfully with incorrect output: 60% completion
-- Program has syntax errors or is incomplete: 40% completion
-- Program has few coding and syntax errors: 30% completion
-- No submission: 0%
+- Create a decorator that checks if a user is authorized before allowing function execution.
+- Apply this decorator to multiple functions, ensuring that each function only executes if the user is authorized.
+- Implement this in a file named `decorator.py`.
+
+### Grading Criteria
+
+Submissions will be graded based on:
+
+- Correct implementation of the decorator.
+- Successful application of the decorator to multiple functions.
+- Adherence to Python coding standards and practices.
+
+## Part 2: Concurrent Execution with Asyncio (`coroutine.py`)
+
+### Objective
+
+Demonstrate the use of Python's asynchronous capabilities to run multiple factorial calculations concurrently.
+
+### Task
+
+- Define an asynchronous function `factorial` that calculates the factorial of a given number with a delay, simulating a time-consuming task.
+- Schedule concurrent execution of multiple instances of the `factorial` function with different parameters.
+- Implement this in a file named `coroutine.py`.
+
+### Grading Criteria
+
+Submissions will be evaluated based on:
+
+- Correct use of `async`, `await`, `asyncio.sleep()`, `asyncio.gather`, and `asyncio.run()`.
+- Successful concurrent execution of factorial calculations.
+- Output correctness and adherence to the provided output sample.
+
+---
+
+## Submission Instructions
+
+Each team member must submit the following files to Canvas:
+
+- `decorator.py` and `coroutine.py` files.
+- A PDF file containing a copy of `decorator.py` and `coroutine.py` along with the runtime output.
+
+Points will be deducted for missing files, incorrect outputs, syntax errors, or incomplete programs as outlined in the assignment details.
+
+## Team Collaboration
+
+- Clearly indicate the completion level of the lab assignment for each team member in the submission comments.
+- All team members must agree on the completion level of each member, ranging from 100% for a fully successful program to 0% for no submission.
